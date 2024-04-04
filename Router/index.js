@@ -32,10 +32,10 @@ router.post("/register",async(req,res)=>{
             //adding user to the db
             const registeringUser=await addingUsers(data);
             //sending mail to activate account
-            const link=`https://inventorymanagementandbilling.netlify.app/activation/${registeringUser[0]._id}`
+            const link=`https://curious-peony-d42fbc.netlify.app/activation/${registeringUser[0]._id}`
             //composing mail
             const composingMail={
-                from:"fullstackpurpose@gmail.com",
+                from:"fullstack@gmail.com",
                 to:registeringUser[0].email,
                 subject:"Account Activation Link",
                 html:`<h1>Inventory Management and Billing Application</h1>
