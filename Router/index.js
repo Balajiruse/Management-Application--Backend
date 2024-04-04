@@ -109,10 +109,10 @@ router.post("/login",async(req,res)=>{
                 }else{
                     //if account is not active
                      //sending mail to activate account
-                    const link=`https://inventorymanagementandbilling.netlify.app/activation/${checkUser[0]._id}`
+                    const link=`https://curious-peony-d42fbc.netlify.app/activation/${checkUser[0]._id}`
                     //composing mail
                     const composingMail={
-                        from:"fullstackpurpose@gmail.com",
+                        from:"fullstack@gmail.com",
                         to:checkUser[0].email,
                         subject:"Account Activation Link",
                         html:`<h1>Inventory Management and Billing Application</h1>
@@ -167,10 +167,10 @@ router.post("/forgot",async(req,res)=>{
             //adding token to the database
             const setToken=await forgotToken(findUser[0]._id,token);
              //sending mail to reset password
-             const link=`https://inventorymanagementandbilling.netlify.app/reset/${findUser[0]._id}`
+             const link=`https://curious-peony-d42fbc.netlify.app/reset/${findUser[0]._id}`
              //composing mail
              const composingMail={
-                 from:"fullstackpurpose@gmail.com",
+                 from:"fullstack@gmail.com",
                  to:findUser[0].email,
                  subject:"Password Reset Link",
                  html:`<h1>Inventory Management and Billing Application</h1>
